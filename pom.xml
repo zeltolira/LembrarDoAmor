@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.4</version>
+		<version>2.7.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.lembrete</groupId>
-	<artifactId>conjuge-lembrete</artifactId>
+	<artifactId>lembrete</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>conjuge-lembrete</name>
 	<description>Esse projeto mantem as entidades conjuge e lembretes</description>
@@ -35,11 +35,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
