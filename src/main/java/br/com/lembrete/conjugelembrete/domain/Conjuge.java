@@ -41,7 +41,7 @@ public class Conjuge {
 	private LocalDateTime dataHoraUltimaAlteracao;
 
 	public Conjuge(ConjugeRequest conjugeRequest) {
-		this.nomeConjuge = conjugeRequest.getNome();
+		this.nomeConjuge = conjugeRequest.getNomeConjuge();
 		this.sexo = conjugeRequest.getSexo();
 		this.celular = conjugeRequest.getCelular();
 		this.dataNascimento = conjugeRequest.getDataNascimento();

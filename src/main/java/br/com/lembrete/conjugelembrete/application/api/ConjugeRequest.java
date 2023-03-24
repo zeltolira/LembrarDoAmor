@@ -12,7 +12,7 @@ import lombok.Value;
 public class ConjugeRequest {
 
 	@NotBlank
-	private String nome;
+	private String nomeConjuge;
 	@NotNull
 	private Sexo sexo;
 	@NotBlank
