@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,14 +40,11 @@ public class Conjuge {
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraUltimaAlteracao;
 
-	public Conjuge(UUID idConjuge, @NotBlank String nomeConjuge, @NotNull Sexo sexo, @NotBlank String celular,
-			@NotNull LocalDate dataNascimento) {
-		this.idConjuge = idConjuge;
-		this.nomeConjuge = nomeConjuge;
-		this.sexo = sexo;
-		this.celular = celular;
-		this.dataNascimento = dataNascimento;
+	public Conjuge(ConjugeRequest conjugeRequest) {
+		this.nomeConjuge = conjugeRequest.getNome();
+		this.sexo = conjugeRequest.getSexo();
+		this.celular = conjugeRequest.getCelular();
+		this.dataNascimento = conjugeRequest.getDataNascimento();
 		this.dataHoraDoCadastro = LocalDateTime.now();
-	}
-
+		}
 }
