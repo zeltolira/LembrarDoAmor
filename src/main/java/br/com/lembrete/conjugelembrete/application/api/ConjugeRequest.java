@@ -1,7 +1,6 @@
 package br.com.lembrete.conjugelembrete.application.api;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
