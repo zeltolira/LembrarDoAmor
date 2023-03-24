@@ -28,7 +28,7 @@ public class Conjuge {
 	@Column(columnDefinition = "uuid", name = "id", updatable = false, unique = true, nullable = false)
 	private UUID idConjuge;
 	@NotBlank
-	private String nome;
+	private String nomeConjuge;
 	@NotNull
 	private Sexo sexo;
 	@NotBlank
@@ -39,10 +39,10 @@ public class Conjuge {
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraUltimaAlteracao;
 
-	public Conjuge(UUID idConjuge, @NotBlank String nome, @NotNull Sexo sexo, @NotBlank String celular,
+	public Conjuge(UUID idConjuge, @NotBlank String nomeConjuge, @NotNull Sexo sexo, @NotBlank String celular,
 			@NotNull LocalDate dataNascimento) {
 		this.idConjuge = idConjuge;
-		this.nome = nome;
+		this.nomeConjuge = nomeConjuge;
 		this.sexo = sexo;
 		this.celular = celular;
 		this.dataNascimento = dataNascimento;
