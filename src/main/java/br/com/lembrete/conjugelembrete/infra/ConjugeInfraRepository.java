@@ -13,12 +13,12 @@ import lombok.extern.log4j.Log4j2;
 public class ConjugeInfraRepository implements ConjugeRepository {
 
 
-//	private final ConjugeSpringDataJPARepository conjugeSpringDataJPARepository;
+	private final ConjugeSpringDataJPARepository conjugeSpringDataJPARepository;
 
 	@Override
 	public Conjuge salva(Conjuge conjuge) {
 		log.info("[inicia] ConjugeInfraRepository - salva");
-		//conjugeSpringDataJPARepository.save(conjuge);
+		conjugeSpringDataJPARepository.save(conjuge);
 		log.info("[finaliza] ConjugeInfraRepository - salva");
 		return conjuge;
 	}
