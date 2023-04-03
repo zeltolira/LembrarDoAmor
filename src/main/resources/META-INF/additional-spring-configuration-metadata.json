@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "springdoc.swagger-ui.path",
+    "type": "java.lang.String",
+    "description": "A description for 'springdoc.swagger-ui.path'"
+  },
+  {
+    "name": "spring.jpa.yml.hibernate.jdbc.lob.non_contextual_creation",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.yml.hibernate.jdbc.lob.non_contextual_creation'"
+  }
+]}

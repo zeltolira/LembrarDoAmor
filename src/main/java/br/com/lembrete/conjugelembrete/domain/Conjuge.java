@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,18 +14,21 @@ import javax.validation.constraints.NotNull;
 
 import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @Entity
+@Getter
+@Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "conjuge")
 public class Conjuge {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(columnDefinition = "uuid", name = "id", updatable = false, unique = true, nullable = false)
 	private UUID idConjuge;
 	@NotBlank
 	private String nomeConjuge;

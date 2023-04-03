@@ -1,4 +1,4 @@
-package br.com.lembrete.conjugelembrete.application.service;
+package br.com.lembrete.conjugelembrete.application.repository;
 
 import br.com.lembrete.conjugelembrete.domain.Conjuge;
 
