@@ -38,7 +38,8 @@ public class ConjugeController implements ConjugeAPI {
 	@Override
 	public ConjugeDetalhadoResponse getTodosConjugesAtravesId(UUID idConjuge) {
 		log.info("[inicia] ConjugeController - getTodosConjugesAtravesId");
+		ConjugeDetalhadoResponse conjugeDetalhado = conjugeService.buscaConjugeAtravesId();
 		log.info("[finaliza] ConjugeController - getTodosConjugesAtravesId");
-		return null;
+		return conjugeDetalhado;
 	}
 }

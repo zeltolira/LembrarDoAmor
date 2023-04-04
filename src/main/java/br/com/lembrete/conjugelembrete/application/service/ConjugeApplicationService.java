@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import br.com.lembrete.conjugelembrete.application.api.request.ConjugeRequest;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeDetalhadoResponse;
 import br.com.lembrete.conjugelembrete.application.api.response.ConjugeListResponse;
 import br.com.lembrete.conjugelembrete.application.api.response.ConjugeResponse;
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
@@ -35,6 +36,13 @@ public class ConjugeApplicationService implements ConjugeService {
 		List<Conjuge> conjuges = conjugeRepository.buscaTodosConjuges();
 		log.info("[finaliza) ConjugeApplicationService - buscaTodosConjuges");
 		return ConjugeListResponse.converte(conjuges);
+	}
+
+	@Override
+	public ConjugeDetalhadoResponse buscaConjugeAtravesId() {
+		log.info("[inicia) ConjugeApplicationService - buscaConjugeAtravesId");
+		log.info("[finaliza) ConjugeApplicationService - buscaConjugeAtravesId");
+		return null;
 	}
 
 }
