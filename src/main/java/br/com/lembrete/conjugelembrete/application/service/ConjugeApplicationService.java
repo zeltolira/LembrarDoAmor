@@ -47,4 +47,11 @@ public class ConjugeApplicationService implements ConjugeService {
 		return new ConjugeDetalhadoResponse(conjuge);
 	}
 
+	@Override
+	public void deletaConjugeAtravesId(UUID idConjuge) {
+		log.info("[inicia) ConjugeApplicationService - deletaConjugeAtravesId");
+		log.info("[finaliza) ConjugeApplicationService - deletaConjugeAtravesId");
+		
+	}
+
 }

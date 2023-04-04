@@ -42,4 +42,13 @@ public class ConjugeController implements ConjugeAPI {
 		log.info("[finaliza] ConjugeController - getTodosConjugesAtravesId");
 		return conjugeDetalhado;
 	}
+
+	@Override
+	public void deletaConjugeAtravesId(UUID idConjuge) {
+		log.info("[inicia] ConjugeController - deletaConjugeAtravesId");
+		log.info("[idConjuge] {}",  idConjuge);
+		conjugeService.deletaConjugeAtravesId(idConjuge);
+		log.info("[finaliza] ConjugeController - deletaConjugeAtravesId");
+		
+	}
 }
