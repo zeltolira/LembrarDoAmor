@@ -25,7 +25,8 @@ public class ConjugeController implements ConjugeAPI {
 	@Override
 	public List<ConjugeListResponse> getTodosConjuges() {
 		log.info("[inicia] ConjugeController - getTodosConjuges");
+		List<ConjugeListResponse> conjuges = conjugeService.buscaTodosConjuges();
 		log.info("[finaliza] ConjugeController - getTodosConjuges");
-		return null;
+		return conjuges;
 	}
 }

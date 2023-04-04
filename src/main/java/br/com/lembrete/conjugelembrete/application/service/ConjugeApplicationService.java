@@ -1,7 +1,10 @@
 package br.com.lembrete.conjugelembrete.application.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
+import br.com.lembrete.conjugelembrete.application.api.ConjugeListResponse;
 import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
 import br.com.lembrete.conjugelembrete.application.api.ConjugeResponse;
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
@@ -24,6 +27,13 @@ public class ConjugeApplicationService implements ConjugeService {
 		return ConjugeResponse.builder()
 				.idConjuge(conjuge.getIdConjuge())
 				.build();
+	}
+
+	@Override
+	public List<ConjugeListResponse> buscaTodosConjuges() {
+		log.info("[inicia) ConjugeApplicationService - buscaTodosConjuges");
+		log.info("[finaliza) ConjugeApplicationService - buscaTodosConjuges");
+		return null;
 	}
 
 }
