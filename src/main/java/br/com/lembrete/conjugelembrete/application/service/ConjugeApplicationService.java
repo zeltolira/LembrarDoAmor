@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import br.com.lembrete.conjugelembrete.application.api.ConjugeListResponse;
-import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
-import br.com.lembrete.conjugelembrete.application.api.ConjugeResponse;
+import br.com.lembrete.conjugelembrete.application.api.request.ConjugeRequest;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeListResponse;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeResponse;
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
 import br.com.lembrete.conjugelembrete.domain.Conjuge;
 import lombok.RequiredArgsConstructor;

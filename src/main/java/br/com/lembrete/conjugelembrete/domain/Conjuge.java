@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
+import br.com.lembrete.conjugelembrete.application.api.request.ConjugeRequest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

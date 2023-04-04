@@ -1,9 +1,14 @@
 package br.com.lembrete.conjugelembrete.application.api;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.lembrete.conjugelembrete.application.api.request.ConjugeRequest;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeDetalhadoResponse;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeListResponse;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeResponse;
 import br.com.lembrete.conjugelembrete.application.service.ConjugeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -28,5 +33,12 @@ public class ConjugeController implements ConjugeAPI {
 		List<ConjugeListResponse> conjuges = conjugeService.buscaTodosConjuges();
 		log.info("[finaliza] ConjugeController - getTodosConjuges");
 		return conjuges;
+	}
+
+	@Override
+	public ConjugeDetalhadoResponse getTodosConjugesAtravesId(UUID idConjuge) {
+		log.info("[inicia] ConjugeController - getTodosConjugesAtravesId");
+		log.info("[finaliza] ConjugeController - getTodosConjugesAtravesId");
+		return null;
 	}
 }

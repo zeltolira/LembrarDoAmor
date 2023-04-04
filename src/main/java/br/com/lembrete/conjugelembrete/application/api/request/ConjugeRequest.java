@@ -1,4 +1,4 @@
-package br.com.lembrete.conjugelembrete.application.api;
+package br.com.lembrete.conjugelembrete.application.api.request;
 
 import java.time.LocalDate;
 

@@ -2,9 +2,9 @@ package br.com.lembrete.conjugelembrete.application.service;
 
 import java.util.List;
 
-import br.com.lembrete.conjugelembrete.application.api.ConjugeListResponse;
-import br.com.lembrete.conjugelembrete.application.api.ConjugeRequest;
-import br.com.lembrete.conjugelembrete.application.api.ConjugeResponse;
+import br.com.lembrete.conjugelembrete.application.api.request.ConjugeRequest;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeListResponse;
+import br.com.lembrete.conjugelembrete.application.api.response.ConjugeResponse;
 
 public interface ConjugeService {
 	ConjugeResponse criaConjuge(ConjugeRequest conjugeRequest);
