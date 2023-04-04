@@ -1,7 +1,9 @@
 package br.com.lembrete.conjugelembrete.infra;
 
 import java.util.List;
+import java.util.UUID;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
@@ -31,5 +33,14 @@ public class ConjugeInfraRepository implements ConjugeRepository {
 		List<Conjuge> todosConjuges = conjugeSpringDataJPARepository.findAll();
 		log.info("[finaliza] ConjugeInfraRepository - buscaTodosConjuges");
 		return todosConjuges;
+	}
+
+	@Override
+	public Conjuge buscaConjugeAtravesId(UUID idConjuge) {
+		log.info("[inicia] ConjugeInfraRepository - buscaConjugeAtravesId");
+//		Conjuge conjuge = conjugeSpringDataJPARepository.findById(idConjuge)
+//				.orElseThrow(APIException.build(HttpStatus.NOT_FOUND, "Conjuge não encontrado!"));
+		log.info("[finaliza] ConjugeInfraRepository - buscaConjugeAtravesId");
+		return null;
 	}
 }

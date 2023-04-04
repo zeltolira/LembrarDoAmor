@@ -1,6 +1,7 @@
 package br.com.lembrete.conjugelembrete.application.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
@@ -39,10 +40,11 @@ public class ConjugeApplicationService implements ConjugeService {
 	}
 
 	@Override
-	public ConjugeDetalhadoResponse buscaConjugeAtravesId() {
+	public ConjugeDetalhadoResponse buscaConjugeAtravesId(UUID idConjuge) {
 		log.info("[inicia) ConjugeApplicationService - buscaConjugeAtravesId");
+		Conjuge conjuge =  conjugeRepository.buscaConjugeAtravesId(idConjuge);
 		log.info("[finaliza) ConjugeApplicationService - buscaConjugeAtravesId");
-		return null;
+		return new ConjugeDetalhadoResponse(conjuge);
 	}
 
 }
