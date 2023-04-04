@@ -9,4 +9,5 @@ public interface ConjugeRepository {
 	Conjuge salva(Conjuge conjuge);
 	List<Conjuge> buscaTodosConjuges();
 	Conjuge buscaConjugeAtravesId(UUID idConjuge);
+	void deletaConjugeAtravesId(Conjuge conjuge);
 }

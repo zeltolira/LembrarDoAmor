@@ -44,4 +44,12 @@ public class ConjugeInfraRepository implements ConjugeRepository {
 		log.info("[finaliza] ConjugeInfraRepository - buscaConjugeAtravesId");
 		return conjuge;
 	}
+
+	@Override
+	public void deletaConjugeAtravesId(Conjuge conjuge) {
+		log.info("[inicia] ConjugeInfraRepository - deletaConjugeAtravesId");
+		conjugeSpringDataJPARepository.delete(conjuge);
+		log.info("[finaliza] ConjugeInfraRepository - deletaConjugeAtravesId");
+		
+	}
 }
