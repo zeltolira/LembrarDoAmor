@@ -20,7 +20,7 @@ public class ConjugeDetalhadoResponse {
 
 	public ConjugeDetalhadoResponse(Conjuge conjuge) {
 		this.idConjuge = conjuge.getIdConjuge();
-		this.nomeConjuge = conjuge.getCelular();
+		this.nomeConjuge = conjuge.getNomeConjuge();
 		this.sexo = conjuge.getSexo();
 		this.celular = conjuge.getCelular();
 		this.dataNascimento = conjuge.getDataNascimento();
