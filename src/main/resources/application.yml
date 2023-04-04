@@ -2,6 +2,7 @@ server:
   servlet:
     context-path: /lembrete/api
 
+
 spring.jpa.database: POSTGRESQL
 spring.datasource.driver-class-name: org.postgresql.Driver
 spring.datasource.url: jdbc:postgresql://localhost:5433/conjuge-lembrete

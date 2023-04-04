@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.lembrete.conjugelembrete.application.api.ConjugeListResponse;
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
 import br.com.lembrete.conjugelembrete.domain.Conjuge;
 import lombok.RequiredArgsConstructor;
@@ -27,10 +26,10 @@ public class ConjugeInfraRepository implements ConjugeRepository {
 	}
 
 	@Override
-	public List<ConjugeListResponse> buscaTodosConjuges() {
+	public List<Conjuge> buscaTodosConjuges() {
 		log.info("[inicia] ConjugeInfraRepository - buscaTodosConjuges");
+		List<Conjuge> todosConjuges = conjugeSpringDataJPARepository.findAll();
 		log.info("[finaliza] ConjugeInfraRepository - buscaTodosConjuges");
-		return null;
+		return todosConjuges;
 	}
-
 }
