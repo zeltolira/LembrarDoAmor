@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.lembrete.conjugelembrete.application.repository.ConjugeRepository;
 import br.com.lembrete.conjugelembrete.domain.Conjuge;
+import br.com.lembrete.conjugelembrete.handler.APIException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -38,9 +39,9 @@ public class ConjugeInfraRepository implements ConjugeRepository {
 	@Override
 	public Conjuge buscaConjugeAtravesId(UUID idConjuge) {
 		log.info("[inicia] ConjugeInfraRepository - buscaConjugeAtravesId");
-//		Conjuge conjuge = conjugeSpringDataJPARepository.findById(idConjuge)
-//				.orElseThrow(APIException.build(HttpStatus.NOT_FOUND, "Conjuge não encontrado!"));
+		Conjuge conjuge = conjugeSpringDataJPARepository.findById(idConjuge)
+				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Conjuge não encontrado!"));
 		log.info("[finaliza] ConjugeInfraRepository - buscaConjugeAtravesId");
-		return null;
+		return conjuge;
 	}
 }
